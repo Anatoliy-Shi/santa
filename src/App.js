@@ -27,8 +27,16 @@ function App() {
         setRandomPresent(Math.floor(Math.random() * present.length))
         setDonate(donate.filter((el, key) => key !== randomDonate))
         setPresent(present.filter((el, key) => key !== randomPresent))
-
+        const fileData = JSON.stringify(present[randomPresent]);
+        const blob = new Blob([fileData], {type: "text/plain"});
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.download = donate[randomDonate];
+        link.href = url;
+        link.click();
     }
+
+
     if (donate.length === 0) return <div className="App">
         <div className="Container end">закончили</div>
     </div>
@@ -39,7 +47,7 @@ function App() {
                 <div className="Container">
                     <img className="image" src={santa} alt="santa"/>
                     <p>подарок дарит <br/> {donate[randomDonate]}</p>
-                    <p>подарок получает <br/> {present[randomPresent]}</p>
+                    <p>подарок получает <br/> </p>
                     <button onClick={handleClick}>
                         следующий
                     </button>

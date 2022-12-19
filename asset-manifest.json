@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/santa/static/css/main.cf412711.css",
-    "main.js": "/santa/static/js/main.93a2331d.js",
+    "main.css": "/santa/static/css/main.574a710a.css",
+    "main.js": "/santa/static/js/main.e398ddf0.js",
     "static/media/winter.jpg": "/santa/static/media/winter.63bfe539be9acb8ba9bb.jpg",
     "static/media/santa.jpg": "/santa/static/media/santa.f314e383448b33c53b92.jpg",
     "index.html": "/santa/index.html",
-    "main.cf412711.css.map": "/santa/static/css/main.cf412711.css.map",
-    "main.93a2331d.js.map": "/santa/static/js/main.93a2331d.js.map"
+    "main.574a710a.css.map": "/santa/static/css/main.574a710a.css.map",
+    "main.e398ddf0.js.map": "/santa/static/js/main.e398ddf0.js.map"
   },
   "entrypoints": [
-    "static/css/main.cf412711.css",
-    "static/js/main.93a2331d.js"
+    "static/css/main.574a710a.css",
+    "static/js/main.e398ddf0.js"
   ]
 }

@@ -23,11 +23,6 @@ function App() {
         }
     }, [present, randomPresent, donate, randomDonate])
 
-    useEffect(() => {
-        console.log(present, 'present', donate, 'donate')
-    }, [donate, present])
-
-
     const handleClick = () => {
         if(donate.length === 0) {
             setTheEnd(true)
@@ -37,7 +32,7 @@ function App() {
             setDonate(donate.filter((el, key) => key !== randomDonate))
             setPresent(present.filter((el, key) => key !== randomPresent))
             const fileData = JSON.stringify(present[randomPresent]);
-            const blob = new Blob([fileData], {type: "text/plain"});
+            const blob = new Blob([fileData], {type: "text/plain;charset=utf-8;"});
             const url = URL.createObjectURL(blob);
             const link = document.createElement('a');
             link.download = donate[randomDonate];
@@ -52,7 +47,7 @@ function App() {
     const nextPerson = () => {
         setValue('')
         setDonate([...donate, value])
-        setPresent([...donate, value])
+        setPresent([...present, value])
     }
      const letsGo = () => {
          setVisible(true)
